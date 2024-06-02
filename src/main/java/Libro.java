@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class Libro extends Bibilioteca {
     String nombreLibro;
     String nombreAutor;
-    boolean prestado = false;
+     static  boolean prestado = false;
     Scanner scanner = new Scanner(System.in);
 
-    public void estadoLibro() {
+    public static void estadoLibro() {
         if (prestado) {
             System.out.println("El libro esta prestado.");
         } else {
