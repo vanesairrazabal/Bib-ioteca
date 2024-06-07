@@ -4,11 +4,28 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Libro extends Bibilioteca {
+public class Libro /*extends Bibilioteca*/ {
     String nombreLibro;
+
+    public String getNombreLibro() {
+        return nombreLibro;
+    }
+
+    public void setNombreLibro(String nombreLibro) {
+        this.nombreLibro = nombreLibro;
+    }
+
+    public String getNombreAutor() {
+        return nombreAutor;
+    }
+
+    public void setNombreAutor(String nombreAutor) {
+        this.nombreAutor = nombreAutor;
+    }
+
     String nombreAutor;
-     static  boolean prestado = false;
-    Scanner scanner = new Scanner(System.in);
+    static boolean prestado = false;
+    static Scanner scanner = new Scanner(System.in);
 
     public static void estadoLibro() {
         if (prestado) {
@@ -19,6 +36,8 @@ public class Libro extends Bibilioteca {
         }
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Nombre:'" + nombreLibro + '\'' + ", Autor='" + nombreAutor + '\'';
+    }
 }

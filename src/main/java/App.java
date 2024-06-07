@@ -1,8 +1,13 @@
 
 public class App extends Bibilioteca  {
     public static void main(String[] args) {
-        mostrarMenu();
-        while(opcionUsuario != -1){
+        System.out.println("---BIENVENIDO A LA BIBLIOTECA---");
+        System.out.println();
+        System.out.println();
+        int opcionUsuario = -2;
+        while(opcionUsuario !=-1){
+            mostrarMenu();
+            opcionUsuario = scanner.nextInt();
             switch (opcionUsuario){
                 case 1:
                     agregarLibro();
